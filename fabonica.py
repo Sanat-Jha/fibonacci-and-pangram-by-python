@@ -1,12 +1,9 @@
 nterms=int(input('no. greater than 0:'))
-
-n1=0
-n2=1
-count=0
-while nterms>count:
-              print(n1)
-              nth=n1+n2
-              n1=n2
-              n2=nth
-              count += 1
-
+lst = [0,1]
+n = 0
+while n<nterms:
+    n = lst[len(lst)-1]+lst[len(lst)-2]
+    lst.append(n)
+lst.pop()
+for i in lst:
+    print(i)
